@@ -1,0 +1,9 @@
+---
+title: Articles
+layout: page.njk
+---
+  <ul>
+{%- for post in collections.articles -%}
+  <li{% if page.url == post.url %} aria-current="page"{% endif %}><a href="{{ post.data.url }}">{{ post.data.title }}</a></li>
+{%- endfor -%}
+</ul>
